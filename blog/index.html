@@ -1,1 +1,205 @@
-dd
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | vCommission Insights</title>
+    <link rel="icon" type="image/png" href="https://www.vcommission.com/wp-content/uploads/2020/12/favicon1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --v-blue: #0056b3;
+            --v-dark: #1a1a1a;
+            --v-accent: #ffcc00;
+            --v-gray: #f4f7f6;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+
+        header {
+            background: #ffffff;
+            padding: 10px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000;
+        }
+
+        .logo img { 
+            height: 50px; 
+            display: block;
+        }
+
+        nav { display: flex; align-items: center; }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--v-dark);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--v-blue); }
+
+        /* Blog Header */
+        .blog-banner {
+            background: var(--v-blue);
+            color: white;
+            padding: 120px 10% 60px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .blog-banner h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* Blog Grid */
+        .blog-container {
+            padding: 60px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+        .blog-card img { width: 100%; height: 220px; object-fit: cover; }
+        
+        .blog-card-body { padding: 25px; }
+        .blog-card-body h3 { margin-bottom: 12px; color: var(--v-dark); font-family: 'Montserrat', sans-serif; font-size: 1.2rem; }
+        .blog-card-body p { color: #666; font-size: 0.95rem; margin-bottom: 20px; }
+        
+        .read-more { 
+            color: var(--v-blue); 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 60px 10% 30px;
+        }
+
+        .footer-logo img { height: 60px; margin-bottom: 20px; }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h4 {
+            color: var(--v-accent);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .footer-column ul { list-style: none; padding: 0; }
+        .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li a { color: #ccc; text-decoration: none; transition: 0.3s; }
+        .footer-column ul li a:hover { color: #fff; padding-left: 5px; }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .blog-banner h1 { font-size: 1.8rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://www.vcommission.com/wp-content/uploads/2022/12/cropped-cropped-vc-new-logo.png" alt="vCommission Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html" style="color: var(--v-blue);">Blog</a>
+            <a href="https://www.vcommission.com/about/">About</a>
+            <a href="https://www.vcommission.com/contact-us/">Contact</a>
+            <a href="https://network.vcommission.com/" class="btn" style="padding: 10px 25px; margin-left: 20px; background: var(--v-accent); color: var(--v-dark); text-decoration: none; border-radius: 50px; font-weight: bold;">Login</a>
+        </nav>
+    </header>
+
+    <div class="blog-banner">
+        <h1>Blog</h1>
+    </div>
+
+    <div class="blog-container">
+        <div class="blog-card">
+            <img src="https://www.vcommission.com/wp-content/uploads/2026/01/Slursh-Aff-Prog-1200x675.jpg" alt="Slursh affiliate program">
+            <div class="blog-card-body">
+                <h3>Slursh Affiliate Program: Monetize with a Best-Selling Kitchen Appliances in India</h3>
+                <p>How Slursh’s kitchen products are increasing affiliate revenue</p>
+                <a href="Slursh-Affiliate-Program.html" class="read-more">Read Full Article →</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="https://www.vcommission.com/wp-content/uploads/2026/01/28-1200x675.jpg" alt="Skimmylo affiliate program">
+            <div class="blog-card-body">
+                <h3>Monetize High Intent COD Traffic with Skimmylo Affiliate Program</h3>
+                <p>Learn how Skimmylo helps convert high-intent COD traffic into consistent revenue.</p>
+                <a href="skimmylo-affiliate-program.html" class="read-more">Read Full Article →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="https://www.vcommission.com/wp-content/uploads/2022/12/vc-new-logo2.png" alt="vCommission Footer Logo">
+                </div>
+                <p style="color: #888; font-size: 0.9rem;">vCommission is a leading Global Affiliate Marketing Network delivering Performance on Web & Mobile to Worldwide Advertisers through a growing network of 100K+ Affiliates.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="https://www.vcommission.com/about/">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="https://www.vcommission.com/contact-us/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="https://www.vcommission.com/faq/">FAQ</a></li>
+                    <li><a href="https://www.vcommission.com/privacy-policy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 vCommission Media Pvt Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
